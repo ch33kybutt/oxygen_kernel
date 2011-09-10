@@ -797,8 +797,6 @@ static int battery_adjust_charge_state(struct ds2784_device_info *di)
 
 	if(!enable_charge)
 		charge_mode = CHARGE_OFF;
-	if (di->status.percentage < 95)
-    		di->status.battery_full = 0;
 
 	/* shut off charger when full:
 	 * - CHGTF flag is set
